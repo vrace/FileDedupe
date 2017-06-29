@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Service\DedupeService.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="DedupeApp.cpp" />
+    <ClCompile Include="Service\DedupeMessageOutputService.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Service">
+      <UniqueIdentifier>{389f14ae-1a22-4367-b2f6-8cb254d52a2a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Service\DedupeService.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="DedupeApp.h" />
+    <ClInclude Include="Service\DedupeMessageOutputService.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

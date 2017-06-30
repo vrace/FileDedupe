@@ -1,7 +1,7 @@
 #include <iostream>
 #include "DedupeApp.h"
 #include "Service/DedupeService.h"
-#include "Service/DedupeMessageOutputService.h"
+#include "Service/HandleDupFileService.h"
 
 void DedupeApp::ShowUsage()
 {
@@ -22,7 +22,7 @@ int DedupeApp::Main(int argc, wchar_t *argv[])
 	}
 
 	DedupeService dedupeService;
-	DedupeMessageOutputService output;
+	HandleDupFileService output;
 
 	dedupeService.SetDelegate(output);
 	dedupeService.Dedupe(argv[1]);

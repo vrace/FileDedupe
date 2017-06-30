@@ -1,8 +1,6 @@
 #ifndef DEDUPE_APPLICATION_H
 #define DEDUPE_APPLICATION_H
 
-#include <wchar.h>
-
 class DedupeApp
 {
 public:

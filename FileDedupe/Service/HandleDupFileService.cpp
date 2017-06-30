@@ -1,8 +1,8 @@
-#include "DedupeMessageOutputService.h"
+#include "HandleDupFileService.h"
 #include <iostream>
 #include <string>
 
-void DedupeMessageOutputService::DedupeBegin(const std::wstring &path)
+void HandleDupFileService::DedupeBegin(const std::wstring &path)
 {
 	std::wcout << L"Deduping path '" << path << L"'..." << std::endl;
 	std::wcout << std::endl;
@@ -10,13 +10,13 @@ void DedupeMessageOutputService::DedupeBegin(const std::wstring &path)
 	_found = 0;
 }
 
-void DedupeMessageOutputService::DedupeFound(const std::wstring &file, const std::wstring &dupWith)
+void HandleDupFileService::DedupeFound(const std::wstring &file, const std::wstring &dupWith)
 {
 	std::wcout << file << L" -> " << dupWith << std::endl;
 	_found++;
 }
 
-void DedupeMessageOutputService::DedupeComplete()
+void HandleDupFileService::DedupeComplete()
 {
 	std::wcout << std::endl;
 	std::wcout << _found << L" duplicated file(s) found." << std::endl;

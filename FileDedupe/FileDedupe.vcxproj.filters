@@ -6,7 +6,10 @@
     </ClCompile>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="DedupeApp.cpp" />
-    <ClCompile Include="Service\DedupeMessageOutputService.cpp">
+    <ClCompile Include="Service\ListFileService.cpp">
+      <Filter>Service</Filter>
+    </ClCompile>
+    <ClCompile Include="Service\HandleDupFileService.cpp">
       <Filter>Service</Filter>
     </ClCompile>
   </ItemGroup>
@@ -20,7 +23,10 @@
       <Filter>Service</Filter>
     </ClInclude>
     <ClInclude Include="DedupeApp.h" />
-    <ClInclude Include="Service\DedupeMessageOutputService.h">
+    <ClInclude Include="Service\ListFileService.h">
+      <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Service\HandleDupFileService.h">
       <Filter>Service</Filter>
     </ClInclude>
   </ItemGroup>

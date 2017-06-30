@@ -1,20 +1,30 @@
 #include "DedupeService.h"
 
-DedupeService::DedupeService()
-	: _delegate(NULL)
+void DedupeService::Dedupe(const std::wstring &path)
+{
+	ListFileService listFileService;
+
+	listFileService.SetDelegate(*this);
+	listFileService.List(path);
+}
+
+void DedupeService::ListBegin(const std::wstring &path)
+{
+	_delegate->DedupeBegin(path);
+}
+
+void DedupeService::ListComplete()
+{
+	_delegate->DedupeComplete();
+}
+
+void DedupeService::ListDirectory(const std::wstring &dirName)
 {
 
 }
 
-void DedupeService::Dedupe(const std::wstring &path)
+void DedupeService::ListFile(const std::wstring &fileName)
 {
-	if (_delegate)
-		_delegate->DedupeBegin(path);
-
-	// TODO:
-	if (_delegate)
-		_delegate->DedupeFound(L"a.txt", L"b.txt");
-
-	if (_delegate)
-		_delegate->DedupeComplete();
+	// TODO: is it really a dup?
+	_delegate->DedupeFound(fileName, L"<dummy>");
 }

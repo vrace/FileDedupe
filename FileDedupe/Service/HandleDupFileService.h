@@ -1,15 +1,13 @@
-#ifndef DEDUPE_MESSAGE_OUTPUT_SERVICE_H
-#define DEDUPE_MESSAGE_OUTPUT_SERVICE_H
+#ifndef HANDLE_DUP_FILE_SERVICE_H
+#define HANDLE_DUP_FILE_SERVICE_H
 
 #include "DedupeService.h"
 
-class DedupeMessageOutputService : public DedupeServiceDelegate
+class HandleDupFileService : public DedupeServiceDelegate
 {
 public:
-	DedupeMessageOutputService()
-		: _found(0)
-	{
-	}
+	HandleDupFileService()
+		: _found(0) {}
 
 	void DedupeBegin(const std::wstring &path);
 	void DedupeComplete();

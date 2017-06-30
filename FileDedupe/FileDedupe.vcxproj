@@ -51,7 +51,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -78,13 +78,15 @@
   <ItemGroup>
     <ClCompile Include="DedupeApp.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Service\DedupeMessageOutputService.cpp" />
+    <ClCompile Include="Service\HandleDupFileService.cpp" />
     <ClCompile Include="Service\DedupeService.cpp" />
+    <ClCompile Include="Service\ListFileService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DedupeApp.h" />
-    <ClInclude Include="Service\DedupeMessageOutputService.h" />
+    <ClInclude Include="Service\HandleDupFileService.h" />
     <ClInclude Include="Service\DedupeService.h" />
+    <ClInclude Include="Service\ListFileService.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

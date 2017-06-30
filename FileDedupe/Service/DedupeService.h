@@ -3,6 +3,7 @@
 
 #include <string>
 #include <map>
+#include "ListFileService.h"
 
 class DedupeServiceDelegate
 {
@@ -12,16 +13,22 @@ public:
 	virtual void DedupeFound(const std::wstring &file, const std::wstring &dupWith) = 0;
 };
 
-class DedupeService
+class DedupeService : public ListFileServiceDelegate
 {
 public:
 	typedef std::map<std::string, std::wstring> FileInfoMap;
 
-	DedupeService();
+	DedupeService()
+		: _delegate(NULL) {}
 
 	void SetDelegate(DedupeServiceDelegate &dedupeServiceDelegate) { _delegate = &dedupeServiceDelegate; }
 
 	void Dedupe(const std::wstring &path);
+
+	void ListBegin(const std::wstring &path);
+	void ListComplete();
+	void ListFile(const std::wstring &fileName);
+	void ListDirectory(const std::wstring &dirName);
 
 private:
 	DedupeServiceDelegate *_delegate;

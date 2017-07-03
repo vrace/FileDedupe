@@ -3,4 +3,5 @@
 *.opensdf
 *.user
 Debug/
+x64/
 

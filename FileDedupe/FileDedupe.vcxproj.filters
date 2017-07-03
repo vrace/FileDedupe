@@ -12,10 +12,25 @@
     <ClCompile Include="Service\HandleDupFileService.cpp">
       <Filter>Service</Filter>
     </ClCompile>
+    <ClCompile Include="Utils\sha256\sha256.c">
+      <Filter>Utils\sha256</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\HashFile.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\ForceCreateDirectory.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Service">
       <UniqueIdentifier>{389f14ae-1a22-4367-b2f6-8cb254d52a2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{9008dda5-c0ed-4a49-85f1-0ecf04c2c588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\sha256">
+      <UniqueIdentifier>{6f85a675-169a-4d73-b55d-bfe69ded8bb8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +43,15 @@
     </ClInclude>
     <ClInclude Include="Service\HandleDupFileService.h">
       <Filter>Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\sha256\sha256.h">
+      <Filter>Utils\sha256</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\HashFile.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\ForceCreateDirectory.h">
+      <Filter>Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

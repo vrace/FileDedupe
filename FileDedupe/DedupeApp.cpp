@@ -5,17 +5,17 @@
 
 void DedupeApp::ShowUsage()
 {
-	std::cout << "Usage: FileDedupe <Path to Dedupe>" << std::endl;
+	std::cout << "Usage: FileDedupe <Path to Dedupe> <Path to store dup files>" << std::endl;
 	std::cout << std::endl;
 	std::cout << "For example, the following command line:" << std::endl;
-	std::cout << "    FileDedupe D:\\Aloha" << std::endl;
-	std::cout << "Will move all duplicated files to D:\\Aloha\\Dedupe" << std::endl;
+	std::cout << "    FileDedupe D:\\Aloha D:\\AlohaDedupe" << std::endl;
+	std::cout << "Will move all duplicated files to D:\\AlohaDedupe" << std::endl;
 	std::cout << std::endl;
 }
 
 int DedupeApp::Main(int argc, wchar_t *argv[])
 {
-	if (argc != 2)
+	if (argc != 3)
 	{
 		ShowUsage();
 		return 1;
@@ -23,6 +23,8 @@ int DedupeApp::Main(int argc, wchar_t *argv[])
 
 	DedupeService dedupeService;
 	HandleDupFileService output;
+
+	output.SetOutputPath(argv[2]);
 
 	dedupeService.SetDelegate(output);
 	dedupeService.Dedupe(argv[1]);
